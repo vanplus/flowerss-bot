@@ -62,7 +62,7 @@ var (
 
 const (
 	defaultMessageTplMode = tb.ModeHTML
-	defaultMessageTpl     = `<b>{{.SourceTitle}}</b>{{ if .PreviewText }}
+	defaultMessageTpl     = `{{ if .PreviewText }}
 ---------- Preview ----------
 {{.PreviewText}}
 -----------------------------
@@ -73,7 +73,7 @@ const (
 {{- end }}
 {{.Tags}}
 `
-	defaultMessageMarkdownTpl = `** {{.SourceTitle}} **{{ if .PreviewText }}
+	defaultMessageMarkdownTpl = `{{ if .PreviewText }}
 ---------- Preview ----------
 {{.PreviewText}}
 -----------------------------
