@@ -67,9 +67,9 @@ const (
 {{.PreviewText}}
 -----------------------------
 {{- end}}{{if .EnableTelegraph}}
-{{.ContentTitle}} <a href="{{.TelegraphURL}}">Telegraph</a> | <a href="{{.RawLink}}">原文</a>
+<b>{{.ContentTitle}}</b> <a href="{{.TelegraphURL}}">Telegraph</a> | <a href="{{.RawLink}}">原文</a>
 {{- else }}
-<a href="{{.RawLink}}">{{.ContentTitle}}</a>
+<a href="{{.RawLink}}"><b>{{.ContentTitle}}</b></a>
 {{- end }}
 {{.Tags}}
 `
@@ -78,9 +78,9 @@ const (
 {{.PreviewText}}
 -----------------------------
 {{- end}}{{if .EnableTelegraph}}
-{{.ContentTitle}} [Telegraph]({{.TelegraphURL}}) | [原文]({{.RawLink}})
+**{{.ContentTitle}}** [Telegraph]({{.TelegraphURL}}) | [原文]({{.RawLink}})
 {{- else }}
-[{{.ContentTitle}}]({{.RawLink}})
+[**{{.ContentTitle}}**]({{.RawLink}})
 {{- end }}
 {{.Tags}}
 `
